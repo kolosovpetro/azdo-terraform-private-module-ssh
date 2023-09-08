@@ -20,6 +20,7 @@ variables:
     value: INFO
   - name: WORKING_DIR
     value: '$(System.DefaultWorkingDirectory)'
+  - group: 'PUBLIC_KEY'
 
 stages:
   - stage: "Terraform_CI"
