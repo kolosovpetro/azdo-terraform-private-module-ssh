@@ -1,9 +1,8 @@
-# Terraform template
+# Using private module references in terraform
 
-Terraform template for modules and sub-modules.
-Includes pre-commit hooks that lint the terraform code and generate module's
-documentation as part of README file.
-Contains examples of terraform CI/CD pipelines for GitHub Actions and Azure Pipelines.
+- SSH key failed: https://stackoverflow.com/a/29380765/9541789
+- Trello task: https://trello.com/c/lEv89VzJ
+- How to install SSH keys in Azure Pipelines: https://dev.to/pwd9000/connect-terraform-to-azure-devops-git-repos-over-ssh-163c
 
 ## Pre-commit configuration
 
@@ -61,7 +60,7 @@ sas_token            = "sas_token"
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | ./modules/example_submodule | n/a |
+| <a name="module_storage"></a> [storage](#module\_storage) | git::git@github.com:kolosovpetro/osds-terraform.git//modules/storage | n/a |
 
 ## Resources
 
