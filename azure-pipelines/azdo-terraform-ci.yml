@@ -42,6 +42,13 @@ stages:
             displayName: 'Terraform Version'
             workingDirectory: '$(WORKING_DIR)'
 
+          - task: InstallSSHKey@0
+            displayName: 'Install an SSH key'
+            inputs:
+              knownHostsEntry: '$(known_hosts)'
+              sshPublicKey: '$(id_rsa.pub)'
+              sshKeySecureFile: 'id_rsa'
+
           - script: terraform init -backend=false
             displayName: 'Terraform Init'
             workingDirectory: '$(WORKING_DIR)'
