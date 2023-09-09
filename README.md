@@ -1,8 +1,10 @@
 # Using private module references in terraform
 
 - SSH key failed: https://stackoverflow.com/a/29380765/9541789
-- Trello task: https://trello.com/c/lEv89VzJ
-- How to install SSH keys in Azure Pipelines: https://dev.to/pwd9000/connect-terraform-to-azure-devops-git-repos-over-ssh-163c
+- Trello task 1: https://trello.com/c/lEv89VzJ
+- Trello task 2: https://trello.com/c/9NLGTREz
+- How to install SSH keys in Azure
+  Pipelines: https://dev.to/pwd9000/connect-terraform-to-azure-devops-git-repos-over-ssh-163c
 
 ## Pre-commit configuration
 
@@ -44,38 +46,39 @@ sas_token            = "sas_token"
 # Module documentation
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
-| Name | Version |
-|------|---------|
+| Name                                                                | Version |
+|---------------------------------------------------------------------|---------|
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | =3.71.0 |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.71.0 |
+| Name                                                          | Version |
+|---------------------------------------------------------------|---------|
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.71.0  |
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_storage"></a> [storage](#module\_storage) | git::git@github.com:kolosovpetro/osds-terraform.git//modules/storage | n/a |
+| Name                                                      | Source                                                               | Version |
+|-----------------------------------------------------------|----------------------------------------------------------------------|---------|
+| <a name="module_storage"></a> [storage](#module\_storage) | git::git@github.com:kolosovpetro/osds-terraform.git//modules/storage | n/a     |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [azurerm_resource_group.public](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/resource_group) | resource |
+| Name                                                                                                                              | Type        |
+|-----------------------------------------------------------------------------------------------------------------------------------|-------------|
+| [azurerm_resource_group.public](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/resource_group)   | resource    |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/client_config) | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_prefix"></a> [prefix](#input\_prefix) | Prefix for all resources | `string` | n/a | yes |
-| <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | Resource group location | `string` | n/a | yes |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Resource group name | `string` | n/a | yes |
+| Name                                                                                                        | Description              | Type     | Default | Required |
+|-------------------------------------------------------------------------------------------------------------|--------------------------|----------|---------|:--------:|
+| <a name="input_prefix"></a> [prefix](#input\_prefix)                                                        | Prefix for all resources | `string` | n/a     |   yes    |
+| <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | Resource group location  | `string` | n/a     |   yes    |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name)             | Resource group name      | `string` | n/a     |   yes    |
 
 ## Outputs
 
